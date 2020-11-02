@@ -1,0 +1,97 @@
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin rounded($radius: 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin gradient($pos, $from, $to) {
+  background-image: linear-gradient($pos, $from, $to);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from($from),
+    to($to)
+  );
+  background-image: -moz-linear-gradient($pos, $from, $to);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+@mixin hr($color, $height: 1px) {
+  margin-top: 3px;
+  height: $height;
+  width: 100%;
+  background-image: linear-gradient(to right, transparent, $color, transparent);
+}
+
+@mixin grid($width) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
+  grid-gap: 1rem;
+  margin: 20px 0;
+}
+
+@mixin transition($time: 0.3s) {
+  transition: all $time cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@mixin text-crop(
+  $top-crop,
+  $bottom-crop,
+  $crop-font-size,
+  $crop-line-height,
+  $line-height: 1.3,
+  $top-adjustment: 0px,
+  $bottom-adjustment: 0px
+) {
+  $top-crop: max(
+      ($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)),
+      0
+    ) / $crop-font-size;
+  $bottom-crop: max(
+      (
+        $bottom-crop + ($line-height - $crop-line-height) *
+          ($crop-font-size / 2)
+      ),
+      0
+    ) / $crop-font-size;
+  line-height: $line-height;
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+  &::before {
+    margin-bottom: calc(-#{$top-crop}em + #{$top-adjustment});
+  }
+  &::after {
+    margin-top: calc(-#{$bottom-crop}em + #{$bottom-adjustment});
+  }
+}
+
+@mixin btn-color($defaultColor, $primaryColor) {
+  &:not(:disabled) {
+    background-color: $defaultColor !important;
+    border-color: $defaultColor !important;
+    border-color: $defaultColor !important;
+    &:focus,
+    &:hover {
+      background: $primaryColor !important;
+      border-color: $primaryColor !important;
+    }
+  }
+}

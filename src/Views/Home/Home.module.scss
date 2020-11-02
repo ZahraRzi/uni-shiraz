@@ -1,0 +1,173 @@
+@import '../../styles/variables/_index.module.scss';
+
+.topBackgrounds {
+  background: url(../../Assets/Images/topleft.png) -213px top no-repeat,
+    url(../../Assets/Images/topright.png) 450px -286px no-repeat;
+}
+
+.section1 {
+  margin-bottom: $space-24;
+  .inner {
+    margin-top: $space-24;
+  }
+  .section1Align {
+    display: flex;
+    justify-content: center;
+    margin-top: $space-48;
+  }
+  .section1Left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section1Right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .sectionRightTopButton {
+    width: 200px;
+    height: 48px;
+    font-size: $text-lg;
+    font-weight: bold;
+    background-color: $color-primary-strong;
+  }
+  .sectionRightBottomButton {
+    width: 200px;
+    height: 48px;
+    font-size: $text-lg;
+    font-weight: bold;
+    margin-top: $space-8;
+    border: solid 1.5px $color-primary-strong;
+  }
+  .section1RightText {
+    margin-bottom: $space-8;
+  }
+}
+
+.section2 {
+  .section2Align {
+    display: flex;
+    justify-content: center;
+    padding-top: $space-4;
+    margin-top: $space-15;
+  }
+  .section2Right {
+    padding: $space-6 $space-32 $space-6 $space-12;
+    position: relative;
+  }
+  .section2heading {
+    color: $color-primary;
+    font-size: $text-xl;
+    font-weight: bold;
+    padding-left: $space-24;
+  }
+  .section2Button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $color-primary;
+    color: $color-default;
+    width: 162px;
+    height: 32px;
+  }
+  .section2Left {
+    background: url(../../Assets/Images/component93.png) center no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 450px;
+  }
+  .section2LeftImage {
+    width: 400px;
+    height: 380px;
+  }
+}
+
+.section3 {
+  .inner {
+    background: url(../../Assets/Images/component82.png) right no-repeat;
+  }
+  .section3Align {
+    display: flex;
+    justify-content: center;
+    padding-top: $space-4;
+    margin-top: $space-15;
+  }
+  .section3RightInner {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .section3Left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section3LeftHeading {
+    margin: $space-12 0;
+    font-weight: bolder;
+    font-size: $text-xl;
+  }
+  .section3LeftContent {
+    margin-top: $space-4;
+    font-size: $text-base;
+    padding: 0 $space-32;
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: $space-8;
+  }
+  .section3Button {
+    background-color: $color-primary;
+    color: $color-default;
+    width: 162px;
+    height: 32px;
+  }
+}
+
+.section5 {
+  .section5Align {
+    display: flex;
+    justify-content: center;
+  }
+  .section5Right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section5RightContent {
+    padding: $space-8 $space-15 $space-8 $space-32;
+  }
+  .section5RightText {
+    position: relative;
+  }
+  .section5RightText2 {
+    margin-top: $space-12;
+    text-align: end;
+  }
+  .section5RightText::before {
+    content: '"';
+    color: $color-light;
+    position: absolute;
+    font-size: 3rem;
+  }
+  .section5RightText::after {
+    content: '"';
+    color: $color-light;
+    position: absolute;
+    font-size: 3rem;
+  }
+  .section5Left {
+    background: url(../../Assets/Images/component93.png) center no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

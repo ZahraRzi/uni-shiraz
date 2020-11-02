@@ -1,0 +1,57 @@
+$color-lightest: #f2f3f3;
+$color-lighter: #dee4eb;
+$color-lighter-1: #282f3721;
+$color-light: #c9c9c9;
+$color-normal: #282f37;
+$color-strong: #484848;
+$color-stronger: #333333;
+$color-reverse: #fff;
+
+$color-default: #fff;
+$color-default-strong: #fff;
+$color-default-light: #fff;
+$color-primary: #35db80;
+$color-primary-strong: #11477c;
+$color-primary-light: #40a9ff;
+$color-info: #1db7f0;
+$color-info-strong: #18aee5;
+$color-info-light: #c8f0ff;
+$color-warning: #ffdc7a;
+$color-warning-strong: #ffd45f;
+$color-warning-light: #fff3d2;
+$color-danger: #ff5959;
+$color-danger-2: #ff003b;
+$color-danger-strong: #eb4e4e;
+$color-danger-light: #ffcece;
+
+$color-lighter-1: #282f3721;
+$color-blur-box: rgba(0, 0, 0, 0.3);
+$blur-default: rgba(0, 0, 0, 0.3);
+$color-pillBox: #516173;
+$color-BreakingNews: #e2f1fc;
+$color-strong-footer: #1b1f2b;
+
+:export {
+  color_lightest: $color-lightest;
+  color_lighter: $color-lighter;
+  color_light: $color-light;
+  color_normal: $color-normal;
+  color_strong: $color-strong;
+  color_stronger: $color-stronger;
+  color_reverse: $color-reverse;
+  color_default: $color-default;
+  color_default_strong: $color-default-strong;
+  color_default_light: $color-default-light;
+  color_primary: $color-primary;
+  color_primary_strong: $color-primary-strong;
+  color_primary_light: $color-primary-light;
+  color_info: $color-info;
+  color_info_strong: $color-info-strong;
+  color_info_light: $color-info-light;
+  color_warning: $color-warning;
+  color_warning_strong: $color-warning-strong;
+  color_warning_light: $color-warning-light;
+  color_danger: $color-danger;
+  color_danger_strong: $color-danger-strong;
+  color_danger_light: $color-danger-light;
+}

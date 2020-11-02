@@ -1,0 +1,44 @@
+@import '../../styles/variables/index.module';
+
+.root {
+  .inner {
+    padding: $space-4 0;
+  }
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    color: $color-primary;
+    padding-left: $space-3;
+  }
+  .uniLogoText {
+    font-size: $text-xl;
+    font-weight: bold;
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: $text-base;
+    padding-top: $space-3;
+  }
+  .item {
+    display: inline-flex;
+    padding: $space-2 0;
+  }
+  .itemWhite {
+    color: $color-default;
+  }
+  .itemWhiteIcon {
+    margin-right: $space-1;
+  }
+  .itemWhiteContent::after {
+    content: ' ';
+    display: inline-block;
+    height: 13px;
+    width: 1px;
+    background-color: $color-default;
+    margin-right: 6px;
+  }
+}

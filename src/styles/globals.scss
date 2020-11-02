@@ -1,0 +1,151 @@
+@import './variables/index.module';
+@import './mixins/mediaQuery.module';
+// @import '~nprogress/nprogress.css';
+
+@font-face {
+  font-family: $font-family-base;
+  src: url(../Assets/fonts/IRAN_Sans.eot);
+  src: url(../Assets/fonts/IRAN_Sans.woff) format('woff'),
+    url(../Assets/fonts/IRAN_Sans.woff2) format('woff2'),
+    url(../Assets/fonts/IRAN_Sans.ttf) format('ttf'),
+    url(../Assets/fonts/IRAN_Sans.svg) format('svg');
+}
+
+// @font-face {
+//   font-family: $font-family-dana-static;
+//   src: url('../assets/font/staticfonts/dana-bold.woff') format('woff');
+//   font-weight: $font-bold;
+//   font-display: swap;
+// }
+
+/* Box sizing rules */
+* {
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-family: $font-body;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: initial;
+}
+i {
+  font-style: unset;
+}
+svg {
+  fill: currentColor;
+  font-size: unset;
+}
+#nprogress .bar {
+  background: $color-primary !important;
+}
+#nprogress .spinner-icon {
+  border-top-color: $color-primary !important;
+  border-left-color: $color-primary !important;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px $color-primary, 0 0 5px $color-primary !important;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 $space-2;
+  position: relative;
+  transition: all 0.3s ease;
+  @include media-breakpoint-up($sm) {
+    max-width: 540px;
+  }
+  @include media-breakpoint-up($md) {
+    max-width: 720px;
+    padding: 0;
+  }
+  @include media-breakpoint-up($lg) {
+    max-width: 960px;
+  }
+  @include media-breakpoint-up($xl) {
+    max-width: 1200px;
+  }
+}

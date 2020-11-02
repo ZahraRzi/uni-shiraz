@@ -1,0 +1,35 @@
+$text-2xs: 0.675rem; // 10px
+$text-xs: 0.75rem; // 12px
+$text-sm: 0.875rem; // 14px
+$text-base: 1rem; // 16px
+$text-lg: 1.125rem; // 18px
+$text-xl: 1.25rem; // 20px
+$text-2xl: 1.5rem; // 24px
+$text-3xl: 1.625rem; // 26px
+$text-4xl: 1.875rem; // 30px
+
+$font-light: 300;
+$font-normal: 400; // regular
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+$font-family-base: "IRAN_Sans";
+
+$font-body: $font-family-base, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+:export {
+  text_2xs: $text-2xs;
+  text_xs: $text-xs;
+  text_sm: $text-sm;
+  text_base: $text-base;
+  text_lg: $text-lg;
+  text_xl: $text-xl;
+  text_2xl: $text-2xl;
+  text_3xl: $text-3xl;
+  font_normal: $font-normal;
+  font_medium: $font-medium;
+  font_semibold: $font-semibold;
+  font_bold: $font-bold;
+}
